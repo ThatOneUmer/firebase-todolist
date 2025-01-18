@@ -40,6 +40,7 @@ let imgArr = [
   "https://media.istockphoto.com/id/1373017594/photo/headphones-on-the-orange-color-background.jpg?s=612x612&w=0&k=20&c=9SEBT-6kUjIBy33Ga-C9n6CQMd7FOUk3yC89mOAa0ts=",
   "https://rukminim2.flixcart.com/image/850/1000/xif0q/keyboard/desktop-keyboard/w/l/6/gaming-keyboard-with-87-keys-rgb-backlit-with-suspension-keys-original-imagzcgwtrabgjna.jpeg?q=90&crop=false",
 ];
+
 let dataCatch = async () => {
   const dataArray = [];
   const dataIDS = [];
@@ -56,10 +57,10 @@ let dataCatch = async () => {
   console.log(dataBase);
   console.log(docIds);
 };
-dataCatch();
 
 let dataRender = (database) => {
   let rightBox = document.querySelector(".box");
+  rightBox.innerHTML = "";
   database.forEach((product) => {
     let itemBox = document.createElement("div");
     itemBox.setAttribute("class", "itemBox");
@@ -124,7 +125,6 @@ let deleteItem = async (btn) => {
     await deleteDoc(ref);
     popUp.style.display = "flex";
     popLine.innerText = "Your item Successfully deleted"
-    dataCatch()
   } catch (error) {
     console.error(error);
   }
@@ -140,14 +140,17 @@ okButton.addEventListener("click", okBtn);
 
 let updateItem = async (e) => {
   let inpValue = prompt("update your item name");
-  let inpID = e.parentElement.parentElement.child[1].value;
+  let inpID = e.target.parentElement.parentElement.child[1];
+  console.log(inpID)
   try {
     await updateDoc(doc(db, "list", inpValue), {
       item: inpValue,
       id: inpID,
     });
+
     console.log("updated");
   } catch (error) {
     console.error(error);
   }
 };
+dataCatch();
