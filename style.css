@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Pacifico&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+MX+Guides&family=Playwrite+TZ+Guides&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: black;
+}
+
+h1 {
+  font-family: "Pacifico", serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.826);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+label {
+  color: white;
+}
+
+.console {
+  width: 70%;
+  height: 90%;
+  border: 1px solid rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  background-image: linear-gradient(to right, red, rgb(255, 204, 0));
+}
+
+.left-box {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-right: 1px solid rgb(255, 254, 254);
+}
+
+.right-box {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  padding: 0 5px 0 5px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+.headings {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+input {
+  padding: 2px 2px 2px;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(255, 255, 255);
+  outline: none;
+  border: 3px solid white;
+}
+
+input::placeholder {
+  color: white;
+  text-decoration: line-through;
+}
+
+#error {
+  color: red;
+  display: none;
+}
+
+button {
+  width: 70px;
+  height: 40px;
+  border: none;
+  color: white;
+  text-shadow: 3px 5px 4px black;
+  background-color: rgba(0, 0, 0, 0.638);
+}
+
+button:hover {
+  background-color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.itemBox {
+  height: 150px;
+  padding: 5px 5px 5px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid black;
+}
+
+.divBtns {
+  display: flex;
+  gap: 5px;
+}
+
+.pop-up{
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 5px 5px 5px;
+  top: 10px;
+  z-index: 1;
+  color: white;
+  text-shadow: 2px 5px 7px black;
+  background-color: rgba(255, 200, 0, 0.768);
+}
+
+.pop-btn{
+  background-color: green;
+}
+@media screen and (max-width: 856px) {
+  .console {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-box {
+    border: none;
+  }
+
+  .right-box {
+    border: none;
+  }
+}

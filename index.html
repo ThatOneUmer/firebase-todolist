@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="console">
+        <div class="left-box">
+          <div class="headings">
+            <h1>Firebase Project</h1>
+            <h4>Add to List</h4>
+          </div>
+          <div class="input-box">
+              <label for="input">Product Name </label>
+              <input type="text" placeholder="type any text" id="input" />
+              <label for="id">Product ID</label>
+              <input type="text" placeholder="type any number" id="inp-ID">
+              <button id="btn">ADD</button>
+            </form>
+          </div>
+        </div>
+        <div class="right-box">
+          <h1>items</h1>
+          <div class="box"></div>
+        </div>
+      </div>
+      <div class="pop-up" id="pop-up">
+        <h3 id="pop-line"></h3>
+        <button id="pop-btn">Ok</button>
+      </div>
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
