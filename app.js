@@ -105,6 +105,8 @@ let addItem = async (e) => {
       item: inp.value,
       id: inpID.value,
     });
+    inp.value = "";
+    inpID.value = "";
     popUp.style.display = "flex";
     popLine.innerText = "Your item Successfully created";
     dataCatch();
@@ -124,7 +126,8 @@ let deleteItem = async (btn) => {
     let ref = await doc(db, "list", pID.innerText);
     await deleteDoc(ref);
     popUp.style.display = "flex";
-    popLine.innerText = "Your item Successfully deleted"
+    popLine.innerText = "Your item Successfully deleted";
+    dataCatch();
   } catch (error) {
     console.error(error);
   }
